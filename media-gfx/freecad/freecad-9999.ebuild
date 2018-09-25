@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_{6,7})
 
 inherit cmake-utils eutils xdg-utils fortran-2 python-single-r1
 

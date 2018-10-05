@@ -1,6 +1,0 @@
-sci-libs/vtk -python_single_target_python2_7 python R X all-modules boost egl ffmpeg gdal imaging java json mysql odbc postgres qt5 rendering theora tk tcl views xdmf2
-sci-libs/libmed -python_single_target_python2_7 python fortran 
-sci-libs/hdf5 fortran szip
-x11-libs/cairo xcb
-
->=media-gfx/freecad-0.18 -python_single_target_python2_7

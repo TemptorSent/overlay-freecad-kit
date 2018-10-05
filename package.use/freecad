@@ -1,0 +1,25 @@
+
+# QT5 Use flags
+
+# Disable gles or we won't get desktop gl in qt.
+dev-qt/* opengl -gles -gles2 egl alsa openal qml -gstreamer xcomposite
+
+# Only enable gstreamer for qtmultimedia; let other modules use that.
+dev-qt/qtmultimedia gstreamer
+
+# Enable all qt modules
+dev-qt/* 3d charts concurrent declarative datavis datavis3d designer geolocation graphicaleffects gui help location multimedia network orientation positioning printsupport script scripttools scxml sensors serialport speech sql svg testlib webchannel webengine websockets widgets x11extras xmlpatterns
+dev-python/pyside2 opengl 3d charts concurrent datavis3d declarative designer geolocation graphicaleffects gui help location multimedia network orientation positioning printsupport script scripttools scxml sensors serialport speech sql svg testlib webchannel webengine websockets widgets x11extras xmlpatterns
+dev-python/PyQt5 opengl 3d charts declarative datavis3d designer geolocation graphicaleffects gui help location multimedia network orientation positioning printsupport script scripttools scxml sensors serialport speech sql svg testlib webchannel webengine websockets widgets x11extras xmlpatterns
+
+# Needed by qtwebengine:
+media-libs/libvpx svc
+
+# Flags for deps.
+sci-libs/vtk -python_single_target_python2_7 python R X all-modules boost egl ffmpeg gdal imaging java json mysql odbc postgres qt5 rendering theora tk tcl views xdmf2
+sci-libs/libmed -python_single_target_python2_7 python fortran 
+sci-libs/hdf5 fortran szip
+x11-libs/cairo xcb
+
+# Let freecad use Python 3
+>=media-gfx/freecad-0.18 -python_single_target_python2_7
